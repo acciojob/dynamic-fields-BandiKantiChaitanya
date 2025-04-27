@@ -45,19 +45,15 @@ const App = () => {
           {
             add.map((ad,index)=>(
               <div key={index} >
-              <input type="text" name="name" id="name" placeholder="Name"  value={ad.value}  onChange={(e)=>{handleInputChange(index,'name',e.target.value)}} />
-              <input type="number" name="age" id="age" placeholder="  Age"  value={ad.value}   onChange={(e)=>{handleInputChange(index,'age',e.target.value)}}  />
-              {
-                index>=0 &&
-                (
+              <input type="text" name="name" id="name" placeholder="Name"  value={ad.name}  onChange={(e)=>{handleInputChange(index,'name',e.target.value)}} />
+              <input type="number" name="age" id="age" placeholder="  Age"  value={ad.age}   onChange={(e)=>{handleInputChange(index,'age',e.target.value)}}  />
+              
                   <button  type="button" onClick={()=>{handleRemove(index)}} >Remove</button>
-                )
-              }
             </div>
             ))
           }
           
-          <button type="button"  onClick={handleAdd} >Add More</button>
+          <button type="button"  onClick={handleAdd} >Add More..</button>
           <button type="submit"  >Submit</button>
         </form>
     </div>
